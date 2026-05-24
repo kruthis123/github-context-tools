@@ -31,39 +31,39 @@ Each tool is fully typed using `Annotated[type, "description"]` on every paramet
 
 | Tool | Description | Returns |
 |---|---|---|
-| [`get_pr_metadata`](src/github_context_tools/tools/pr.py#L11) | Title, author, branch names, SHAs, state, and change stats for a PR | `PRMetadata` |
-| [`get_parsed_pr_diff`](src/github_context_tools/tools/pr.py#L46) | Structured diff of every file changed in a PR, broken into hunks and individual lines | `PRDiff` |
-| [`get_pr_description`](src/github_context_tools/tools/pr.py#L71) | Title, body, and labels of a PR | `PRDescription` |
-| [`get_pr_comments`](src/github_context_tools/tools/pr.py#L89) | All inline review comments and conversation comments on a PR | `list[PRComment]` |
+| [`get_pr_metadata`](https://github.com/kruthis123/github-context-tools/blob/master/src/github_context_tools/tools/pr.py#L11) | Title, author, branch names, SHAs, state, and change stats for a PR | `PRMetadata` |
+| [`get_parsed_pr_diff`](https://github.com/kruthis123/github-context-tools/blob/master/src/github_context_tools/tools/pr.py#L46) | Structured diff of every file changed in a PR, broken into hunks and individual lines | `PRDiff` |
+| [`get_pr_description`](https://github.com/kruthis123/github-context-tools/blob/master/src/github_context_tools/tools/pr.py#L71) | Title, body, and labels of a PR | `PRDescription` |
+| [`get_pr_comments`](https://github.com/kruthis123/github-context-tools/blob/master/src/github_context_tools/tools/pr.py#L89) | All inline review comments and conversation comments on a PR | `list[PRComment]` |
 
 ### Code
 
 | Tool | Description | Returns |
 |---|---|---|
-| [`get_file_at_ref`](src/github_context_tools/tools/code.py#L85) | Contents of a file at any branch, tag, or commit SHA | `FileContent` |
-| [`get_directory_tree`](src/github_context_tools/tools/code.py#L115) | Recursive file tree for a repo or subdirectory at a given ref | `dict` |
-| [`search_codebase`](src/github_context_tools/tools/code.py#L142) | Search a repo by content, file path, filename, or symbol name | `list[SearchResult]` |
-| [`get_sibling_files`](src/github_context_tools/tools/code.py#L189) | All other files in the same directory as a given file | `list[str]` |
+| [`get_file_at_ref`](https://github.com/kruthis123/github-context-tools/blob/master/src/github_context_tools/tools/code.py#L85) | Contents of a file at any branch, tag, or commit SHA | `FileContent` |
+| [`get_directory_tree`](https://github.com/kruthis123/github-context-tools/blob/master/src/github_context_tools/tools/code.py#L115) | Recursive file tree for a repo or subdirectory at a given ref | `dict` |
+| [`search_codebase`](https://github.com/kruthis123/github-context-tools/blob/master/src/github_context_tools/tools/code.py#L142) | Search a repo by content, file path, filename, or symbol name | `list[SearchResult]` |
+| [`get_sibling_files`](https://github.com/kruthis123/github-context-tools/blob/master/src/github_context_tools/tools/code.py#L189) | All other files in the same directory as a given file | `list[str]` |
 
 ### History
 
 | Tool | Description | Returns |
 |---|---|---|
-| [`get_file_commit_history`](src/github_context_tools/tools/history.py#L60) | Recent commits that touched a file, newest-first. Supports filtering by author, date range, and branch | `list[CommitSummary]` |
-| [`get_commit_diff`](src/github_context_tools/tools/history.py#L123) | Structured diff introduced by a single commit | `CommitDiff` |
-| [`get_blame`](src/github_context_tools/tools/history.py#L154) | Blame ranges for an entire file, each annotated with the commit, author, and a recency score | `list[BlameEntry]` |
+| [`get_file_commit_history`](https://github.com/kruthis123/github-context-tools/blob/master/src/github_context_tools/tools/history.py#L60) | Recent commits that touched a file, newest-first. Supports filtering by author, date range, and branch | `list[CommitSummary]` |
+| [`get_commit_diff`](https://github.com/kruthis123/github-context-tools/blob/master/src/github_context_tools/tools/history.py#L123) | Structured diff introduced by a single commit | `CommitDiff` |
+| [`get_blame`](https://github.com/kruthis123/github-context-tools/blob/master/src/github_context_tools/tools/history.py#L154) | Blame ranges for an entire file, each annotated with the commit, author, and a recency score | `list[BlameEntry]` |
 
 ### Issues
 
 | Tool | Description | Returns |
 |---|---|---|
-| [`get_linked_issue`](src/github_context_tools/tools/issues.py#L9) | Title, body, author, labels, state, and comments for a GitHub issue | `Issue` |
+| [`get_linked_issue`](https://github.com/kruthis123/github-context-tools/blob/master/src/github_context_tools/tools/issues.py#L9) | Title, body, author, labels, state, and comments for a GitHub issue | `Issue` |
 
 ### Conventions
 
 | Tool | Description | Returns |
 |---|---|---|
-| [`get_repo_conventions`](src/github_context_tools/tools/conventions.py#L36) | Contents of well-known convention and context files from the default branch (`CONTRIBUTING.md`, `CLAUDE.md`, `AGENTS.md`, `.cursor/rules`, `.cursorrules`, `.github/copilot-instructions.md`, `docs/architecture.md`, `docs/ARCHITECTURE.md`, `docs/development.md`, `DEVELOPMENT.md`) | `RepoConventions` |
+| [`get_repo_conventions`](https://github.com/kruthis123/github-context-tools/blob/master/src/github_context_tools/tools/conventions.py#L36) | Contents of well-known convention and context files from the default branch (`CONTRIBUTING.md`, `CLAUDE.md`, `AGENTS.md`, `.cursor/rules`, `.cursorrules`, `.github/copilot-instructions.md`, `docs/architecture.md`, `docs/ARCHITECTURE.md`, `docs/development.md`, `DEVELOPMENT.md`) | `RepoConventions` |
 
 ## Selecting tools
 
@@ -127,4 +127,4 @@ The token is captured in a closure and never appears in any tool signature, so i
 
 ## License
 
-[MIT](LICENSE)
+[MIT](https://github.com/kruthis123/github-context-tools/blob/master/LICENSE)
